@@ -495,6 +495,10 @@
             display:grid; grid-template-columns:repeat(3, 1fr);
             gap:1rem;
         }
+        .packages-grid-3 {
+            display:grid; grid-template-columns:repeat(3, 1fr);
+            gap:1.2rem;
+        }
         .package-card {
             background:var(--white); border-radius:16px;
             padding:1.2rem; box-shadow:var(--shadow);
@@ -893,9 +897,7 @@
             /* Disable scroll-snap on mobile */
             html { scroll-snap-type:none; }
             /* Packages: 1 column on mobile */
-            #packages > .reveal > div[style*="grid-template-columns:1fr 1fr"] {
-                grid-template-columns:1fr !important;
-            }
+            .packages-grid-3 { grid-template-columns:1fr !important; }
             .snap-section {
                 height:auto; min-height:auto;
                 scroll-snap-align:none;
@@ -1077,48 +1079,69 @@
             <p class="section-subtitle">בחרו את החבילה המתאימה</p>
             <div class="section-line"></div>
         </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;">
+        <div class="packages-grid-3">
             <!-- Package 1: 2 Reels -->
             <div class="production-card" style="display:flex; flex-direction:column;">
                 <div style="text-align:center; padding-bottom:1rem; border-bottom:1px solid rgba(0,2,73,.08);">
                     <div class="production-title" style="margin-bottom:.4rem;">חבילה 1</div>
                     <p style="font-size:.85rem; color:var(--text-light); margin-bottom:1rem;">2 סרטוני רילס</p>
                     <div style="display:flex; align-items:center; justify-content:center; gap:.8rem;">
-                        <span style="text-decoration:line-through; color:rgba(0,2,73,.4); font-family:'Jost',sans-serif; font-size:1.1rem; font-weight:500;">4,000 &#8362;</span>
+                        <span style="text-decoration:line-through; color:rgba(0,2,73,.4); font-family:'Jost',sans-serif; font-size:1.05rem; font-weight:500;">4,000 &#8362;</span>
                         <div class="production-price-tag">3,500 &#8362;</div>
                     </div>
                 </div>
                 <ul class="feature-list" style="margin-top:1rem; flex:1;">
-                    <li><strong>הכנה ותיאום ציפיות</strong> - שיחת בריף לדיוק המסרים</li>
-                    <li><strong>בניית קונספט ויזואלי</strong> - לסרטון בהתאם לצורך</li>
+                    <li><strong>הכנה ותיאום ציפיות</strong></li>
+                    <li><strong>בניית קונספט ויזואלי</strong></li>
                     <li><strong>יום צילום בפועל</strong> - כ-5 שעות</li>
                     <li><strong>ניהול סטורי</strong> - במהלך האירוע</li>
-                    <li><strong>2 סרטוני רילס ערוכים</strong> - מותאמים לרשתות החברתיות</li>
+                    <li><strong>2 סרטוני רילס ערוכים</strong></li>
                     <li><strong>50 תמונות סטילס ערוכות</strong></li>
                     <li><strong>צילום במצלמה מקצועית</strong></li>
-                    <li><strong>אספקה</strong> - עד 5 ימי עסקים מיום הצילום</li>
+                    <li><strong>אספקה</strong> - עד 5 ימי עסקים</li>
                 </ul>
             </div>
-            <!-- Package 2: 4 Reels -->
+            <!-- Package 2: 3 Reels -->
+            <div class="production-card" style="display:flex; flex-direction:column;">
+                <div style="text-align:center; padding-bottom:1rem; border-bottom:1px solid rgba(0,2,73,.08);">
+                    <div class="production-title" style="margin-bottom:.4rem;">חבילה 2</div>
+                    <p style="font-size:.85rem; color:var(--text-light); margin-bottom:1rem;">3 סרטוני רילס</p>
+                    <div style="display:flex; align-items:center; justify-content:center; gap:.8rem;">
+                        <span style="text-decoration:line-through; color:rgba(0,2,73,.4); font-family:'Jost',sans-serif; font-size:1.05rem; font-weight:500;">4,800 &#8362;</span>
+                        <div class="production-price-tag">4,200 &#8362;</div>
+                    </div>
+                </div>
+                <ul class="feature-list" style="margin-top:1rem; flex:1;">
+                    <li><strong>הכנה ותיאום ציפיות</strong></li>
+                    <li><strong>בניית קונספט ויזואלי</strong></li>
+                    <li><strong>יום צילום בפועל</strong> - כ-5 שעות</li>
+                    <li><strong>ניהול סטורי</strong> - במהלך האירוע</li>
+                    <li><strong>3 סרטוני רילס ערוכים</strong></li>
+                    <li><strong>50 תמונות סטילס ערוכות</strong></li>
+                    <li><strong>צילום במצלמה מקצועית</strong></li>
+                    <li><strong>אספקה</strong> - עד 5 ימי עסקים</li>
+                </ul>
+            </div>
+            <!-- Package 3: 4 Reels -->
             <div class="production-card" style="display:flex; flex-direction:column; border:2px solid var(--navy);">
                 <div style="text-align:center; padding-bottom:1rem; border-bottom:1px solid rgba(0,2,73,.08); position:relative;">
                     <span style="position:absolute; top:-1.8rem; right:50%; transform:translateX(50%); background:var(--navy); color:var(--ivory); padding:.3rem 1rem; border-radius:4px; font-size:.7rem; font-weight:600; letter-spacing:2px; font-family:'Jost',sans-serif;">BEST VALUE</span>
-                    <div class="production-title" style="margin-bottom:.4rem;">חבילה 2</div>
+                    <div class="production-title" style="margin-bottom:.4rem;">חבילה 3</div>
                     <p style="font-size:.85rem; color:var(--text-light); margin-bottom:1rem;">4 סרטוני רילס</p>
                     <div style="display:flex; align-items:center; justify-content:center; gap:.8rem;">
-                        <span style="text-decoration:line-through; color:rgba(0,2,73,.4); font-family:'Jost',sans-serif; font-size:1.1rem; font-weight:500;">5,500 &#8362;</span>
+                        <span style="text-decoration:line-through; color:rgba(0,2,73,.4); font-family:'Jost',sans-serif; font-size:1.05rem; font-weight:500;">5,500 &#8362;</span>
                         <div class="production-price-tag">4,900 &#8362;</div>
                     </div>
                 </div>
                 <ul class="feature-list" style="margin-top:1rem; flex:1;">
-                    <li><strong>הכנה ותיאום ציפיות</strong> - שיחת בריף לדיוק המסרים</li>
-                    <li><strong>בניית קונספט ויזואלי</strong> - לסרטונים בהתאם לצורך</li>
+                    <li><strong>הכנה ותיאום ציפיות</strong></li>
+                    <li><strong>בניית קונספט ויזואלי</strong></li>
                     <li><strong>יום צילום בפועל</strong> - כ-5 שעות</li>
                     <li><strong>ניהול סטורי</strong> - במהלך האירוע</li>
-                    <li><strong>4 סרטוני רילס ערוכים</strong> - מותאמים לרשתות החברתיות</li>
+                    <li><strong>4 סרטוני רילס ערוכים</strong></li>
                     <li><strong>50 תמונות סטילס ערוכות</strong></li>
                     <li><strong>צילום במצלמה מקצועית</strong></li>
-                    <li><strong>אספקה</strong> - עד 5 ימי עסקים מיום הצילום</li>
+                    <li><strong>אספקה</strong> - עד 5 ימי עסקים</li>
                 </ul>
             </div>
         </div>
